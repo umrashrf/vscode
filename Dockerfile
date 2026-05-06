@@ -29,7 +29,6 @@ RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION && nvm use
 ENV PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 RUN echo "export PATH=$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH" >> $HOME/.bashrc
 
-RUN npm install -g npm@11.13.0
 RUN npm install
 
 # ENTRYPOINT can not be overwritten
